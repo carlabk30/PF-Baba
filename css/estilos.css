@@ -555,6 +555,47 @@ CONTACTO html
     font-size: 1.4rem;
 }
 
+.contact__form input,
+.contact__form textarea{
+    padding: 6px 12px;
+    font-size: 1.2rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+.contact__form button {
+    height: 4rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.6rem;
+    background-color: var(--yellow);
+    color: var(--text);
+    width: 100%;
+}
+
+.contact__info {
+    padding: 3rem 0;
+}
+
+.contact__info li {
+    margin-bottom: 1rem;
+}
+
+.contact__info .social {
+    display: flex;
+    flex-direction: row;
+}  
+
+.contact__info .social .i {
+    margin-right: 20px;
+    margin-bottom: 1rem;
+    width: 20px;
+    height: 20px;
+}
+
+.map iframe {
+    width: 100%;
+}
 /***********************************
 MEDIAS QUERIES
 ***********************************/
@@ -628,8 +669,6 @@ MEDIAS QUERIES
         border-radius: 0 10px 10px 0;
         color: var(--white);
     }
-
-    
 
     /*======== FOOTER - 768px =========*/
 
