@@ -1,0 +1,203 @@
+@use './variables';
+
+
+/***********************************
+************************************
+PRODUCTOS html
+************************************
+***********************************/
+
+.productos {
+    padding: 2rem 3rem;
+}
+
+/*======== Breadcrumb =========*/
+
+.breadcrumb {
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/*======== Título =========*/
+
+.page-title {
+    h1 {
+        text-align: center ;
+        font-size: 2rem;
+    }
+}
+
+/*======== Filtros =========*/
+
+.filter-buttons {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+
+    .filter-button {
+        border: 2px solid variables.$color-yellow;
+        height: 4rem;
+        padding: 6px 24px;
+        border-radius: 10px;
+        font-weight: 500;
+        background-color: variables.$color-white;
+        font-size: 1.3rem;
+        align-items: center;
+    }
+
+    .filter-button-dropdown {
+        border: 2px solid variables.$color-yellow;
+        padding-left: 12px;
+        height: 4rem;
+        border-radius: 10px;
+        font-weight: 500;
+        background-color: variables.$color-white;
+        font-size: 1.3rem;
+    }
+}
+
+/*======== Productos - cards =========*/
+
+.list-container {
+    padding: 2rem 0;
+
+    .product-list {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 5px;
+
+        .card-container {
+            margin-top: 1vh;
+    
+            .card {
+                background-color: variables.$color-white;
+                border: 1px solid variables.$color-border;
+                padding: 10px;
+                border-radius: 12px;
+
+                &:hover {
+                    border-color: variables.$color-text;
+                    transition: all 250ms ease;
+                }
+
+                a {
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+    
+                img {
+                    border-radius: 12px;
+                    width: 100%;
+                    height: 160px;
+                    object-fit: cover;
+                    margin-right: auto;
+                    margin-left: auto;
+                }
+    
+                .card-details {
+                    .name {
+                        font-size: 1.2rem;
+                        margin: 8px 0;
+                        color: variables.$color-secondary-text;
+    
+                        b {
+                            color: variables.$color-text;
+                            font-size: 1.4rem;
+                        }
+                    }
+    
+                    .price {
+                        margin-bottom: 20px;
+                        display: inline-block;
+    
+                        .product-price-before {
+                            font-size: 1.2rem;
+                            text-decoration: line-through;
+                            color: variables.$color-secondary-text;
+                        }
+    
+                        .product-price-now {
+                            font-weight: 600;
+                            font-size: 1.6rem;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/***********************************
+MEDIAS QUERIES
+***********************************/
+
+@media screen and (min-width: 768px) {
+
+    /*======== PRODUCTOS html 768px =========*/
+
+    /*======== Filtros =========*/
+    
+    .filter-button,
+    .filter-button-dropdown {
+        font-size: 1.4rem;
+    }
+
+    /*======== Productos - cards =========*/
+    
+    .product-list {
+        grid-template-columns: repeat(3,1fr);
+    }   
+}
+
+@media screen and (min-width: 1024px) {
+
+    /*======== PRODUCTOS html 1024px =========*/
+
+    /*======== Filtros =========*/
+
+    .productos {
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
+
+    .filter-button,
+    .filter-button-dropdown {
+        font-size: 1.6rem;
+    }
+
+    /*======== Productos - cards =========*/
+    
+    .product-list {
+        grid-template-columns: repeat(4,1fr) !important;
+        gap: 10px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+
+    /*======== PRODUCTOS html 1280px =========*/
+
+    /*======== Filtros =========*/
+
+    .page-title {
+        h1 {
+            font-size: 3rem;
+        }
+    }
+
+    .text-result {
+        h5 {
+            font-size: 1.4rem;
+        }
+        
+    }
+
+    .filter-button,
+    .filter-button-dropdown {
+        font-size: 1.6rem;
+    }
+}

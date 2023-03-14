@@ -1,0 +1,398 @@
+@use './variables';
+
+@mixin secondary-button {
+    border: none;
+    padding: 6px 0;
+    border-radius: 8px;
+    font-weight: 600;
+    background-color: variables.$color-yellow;
+    display: block;
+    width: 100%;
+    font-size: 1.3rem;
+};
+
+/***********************************
+************************************
+INICIO html
+************************************
+***********************************/
+
+/*======== Slider =========*/
+
+.slider {
+    background-image: url(https://puppis.vteximg.com.br/arquivos/ids/191357/2301-Website-Banner-Gato-Piedras-221363--Hasta-30Off--221276----D.png?v=638100750892870000);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30vh;
+}
+
+/*======== Top Categories =========*/
+
+.top-categories-container {
+    overflow-x: scroll;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+
+    .box-banner {
+        margin-top: 5vh;
+        margin-bottom: 6vh;
+        width: 150px;
+
+        a{
+            color: inherit;
+        }
+
+        img {
+            height: 150px;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            text-align: center;
+        }
+    }
+}
+
+/*======== Productos más vendidos =========*/
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    align-items: center;
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    a {
+        font-size: 1.2rem;
+        color: variables.$color-dark-yellow;
+        font-weight: 500;
+    }
+}
+
+/*------Cards-------*/
+.products {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: scroll;
+    padding: 0 3rem;
+    gap: 10px;
+
+    .card-container {
+        margin-top: 2vh;
+        margin-bottom: 4vh;
+
+        .card {
+            background-color: variables.$color-white;
+            border: 1px solid variables.$color-border;
+            padding: 20px;
+            border-radius: 12px;
+
+                &:hover {
+                    border-color: variables.$color-text;
+                    transition: all 250ms ease;
+                }
+
+            a {
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
+            img {
+                border-radius: 12px;
+                height: 160px;
+                object-fit: cover;
+            }
+
+            .card-details {
+
+                .name {
+                    font-size: 1.2rem;
+                    margin: 8px 0;
+                    color: variables.$color-secondary-text;
+
+                    b {
+                        color: variables.$color-text;
+                        font-size: 1.4rem;
+                    }
+                }
+
+                .price {
+                    margin-bottom: 20px;
+                    display: inline-block;
+
+                    .product-price-before {
+                        font-size: 1.2rem;
+                        text-decoration: line-through;
+                        color: variables.$color-secondary-text;
+                    }
+
+                    .product-price-now {
+                        font-weight: 600;
+                        font-size: 1.6rem;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.btn__secondary {
+    @include secondary-button;
+}
+
+
+/*======== Promo Cards =========*/
+
+.promo-cards {
+
+
+    display: flex;
+    gap: 20px;
+    padding: 3rem;
+    overflow-x: scroll;
+
+    .promo-card {
+        img {
+            width: 80vw;
+        }
+
+        &:hover {
+            box-shadow: 0 1.2rem 1.6rem rgb(221, 221, 221);
+            transition: all 250ms ease;
+        }
+    }
+}
+
+
+/***********************************
+MEDIAS QUERIES
+***********************************/
+
+@media screen and (min-width: 768px) {
+
+    /*======== INICIO html - 768px =========*/ 
+
+    /*------ Slider - 768px -------*/
+
+    .slider {
+        height: 40vh;
+    }
+
+    /*------ Top Categories - 768px -------*/
+
+    .box-banner {
+        width: 200px;
+
+        img {
+            height: 200px;
+        }
+
+        h3 {
+            font-size: 1.6rem;
+        }
+    }
+
+    /*------ Productos más buscados - 768px -------*/
+
+    .heading {
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem 3rem;
+        align-items: center;
+
+        h1 {
+            font-size: 2.4rem;
+        }
+
+        a {
+            font-size: 1.6rem;
+        }
+    }
+
+    .card-container {
+        margin-top: 3vh;
+
+        .card {
+            img {
+                height: 900px;
+                margin-bottom: 2rem;
+            }
+
+            b {
+                font-size: 1.8rem;
+            }
+
+            .name {
+                font-size: 1.4rem;
+            }
+
+            .card-details {
+                .price {
+                    margin-bottom: 3rem;
+                    display: inline-block;
+
+                    .product-price-before {
+                        font-size: 1.4rem;
+                    }
+
+                    .product-price-now {
+                        font-weight: 600;
+                        font-size: 1.8rem;
+                        margin-right: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .btn__secondary {
+        @include secondary-button;
+        height: 4rem;
+        border-radius: 10px;
+        font-size: 1.6rem;
+    }
+}
+
+/*======== 1024px - Desktop =========*/
+
+@media screen and (min-width: 1024px) {
+
+    /*======== INICIO html - 1024px =========*/
+
+    /*------ Slider - 1024px ------*/
+
+    .slider {
+        height: 50vh;
+    }
+
+    /*------ Top Categories - 1024px ------*/
+
+    .top-categories-container {
+        padding-left: 6rem;
+        padding-right: 6rem;
+        overflow-x: hidden;
+
+        .box-banner {
+            width: 160px;
+
+            img {
+                display: block;
+                padding-bottom: 20px;
+                height: 160px;
+                margin: auto;
+            }
+
+            h3 {
+                font-size: 1.6rem;
+                font-weight: 500;
+            }
+        }
+    }
+
+    /*------ Productos más vendidos - 1024px ------*/
+
+    .heading {
+        padding: 2rem 6rem;
+
+        h1 {
+            font-size: 2.4rem;
+        }
+
+        a {
+            font-size: 1.6rem;
+        }
+    }
+
+    .products {
+        padding-left: 6rem;
+        padding-right: 6rem;
+        margin-right: none;
+        overflow-x: hidden;
+
+        .card-container {
+            .card {
+                img {
+                    height: 160px;
+                    object-fit: cover;
+                }
+
+                .card-details {
+
+                    .name {
+                        font-size: 1.6rem;
+                        margin: 8px 0;
+                        color: variables.$color-secondary-text;
+
+                        b {
+                            color: variables.$color-text;
+                            font-size: 1.8rem;
+                        }
+                    }
+
+                    .price {
+                        margin-bottom: 2rem;
+                        display: inline-block;
+
+                        .product-price-before {
+                            font-size: 1.4rem;
+                            text-decoration: line-through;
+                            color: variables.$color-text;
+                        }
+
+                        .product-price-now {
+                            font-weight: 600;
+                            font-size: 2rem;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            } 
+        }
+    }
+
+    .btn__secondary {
+        @include secondary-button;
+        font-size: 1.6rem;
+    }
+
+    /*------ Promo Cards - 1024px ------*/
+
+    .promo-cards {
+        padding-left: 6rem;
+        padding-right: 6rem;
+        overflow-x: hidden;
+
+        .promo-card {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+
+    /*======== INICIO html - 1280px =========*/
+
+    /*------ Productos más vendidos - 1280px ------*/
+
+    .card-container {
+        .card {
+            img {
+                height: 250px !important;
+            object-fit: cover !important;
+            }
+        }
+    }
+}

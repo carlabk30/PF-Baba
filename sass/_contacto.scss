@@ -1,0 +1,114 @@
+@use './variables';
+
+/***********************************
+************************************
+CONTACTO html
+************************************
+***********************************/
+
+.contacto {
+    padding: 2rem 3rem;
+
+    .contacto__container {
+        .texto {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            font-size: 1.4rem;
+        }
+
+        .contact__form {
+            input, textarea {
+                padding: 6px 12px;
+                font-size: 1.2rem;
+                border: 1px solid variables.$color-border;
+                border-radius: 10px;
+            }
+
+            button {
+                height: 5rem;
+                border: none;
+                border-radius: 10px;
+                font-size: 1.6rem;
+                background-color: variables.$color-yellow;
+                color: variables.$color-text;
+                width: 100%;
+                font-weight: 500;
+
+                &:hover {
+                    transition: all 0.5s ease;
+                    background-color: variables.$color-light-yellow;
+                }
+            }
+        }
+
+        .contact__info {
+            padding: 3rem 0;
+            display: flex;
+
+            ul {
+                margin: auto;
+
+                li {
+                    margin-bottom: 1rem;
+                }
+    
+            }
+
+            .social {
+                display: flex;
+                flex-direction: row;
+
+                li {
+                    margin: auto;
+
+                    .i {
+                        margin-right: 20px;
+                        margin-bottom: 1rem;
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }  
+        }
+
+        .map {
+            iframe {
+                width: 100%;
+            }
+        }
+    }
+}
+
+/***********************************
+MEDIAS QUERIES
+***********************************/
+
+@media screen and (min-width: 768px) {
+
+    /*======== CONTACTO html 768px =========*/
+
+    .contacto-info {
+        display: flex;
+        flex-direction: column;
+        width: 70vw;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    /*======== CONTACTO html 1024px =========*/
+
+    .contacto-info {
+        width: 60vw;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+
+    /*======== CONTACTO html 1280px =========*/
+
+    .contacto-info {
+        width: 50vw;
+    }
+}

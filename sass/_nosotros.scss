@@ -1,0 +1,41 @@
+@use './variables';
+
+/***********************************
+************************************
+NOSOTROS html
+************************************
+***********************************/
+
+.nosotros {
+    padding: 2rem 3rem;
+
+    .nosotros__container {
+        img {
+            display: block;
+            margin: auto;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    /*======== NOSOTROS html 768px =========*/
+
+    .nosotros {
+        padding: 2rem 3rem;
+
+        .nosotros__container {
+            .nosotros__info {
+                display: flex;
+                padding: 1rem;
+                width: 70vw;
+                margin: auto;
+
+                img, p {
+                    margin: auto !important;
+                }
+            }            
+        }
+    }
+
+}
