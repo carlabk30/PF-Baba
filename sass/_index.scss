@@ -227,6 +227,8 @@ MEDIAS QUERIES
             img {
                 height: 900px;
                 margin-bottom: 2rem;
+                display: block;
+                margin: auto;
             }
 
             b {
@@ -391,7 +393,9 @@ MEDIAS QUERIES
         .card {
             img {
                 height: 250px !important;
-            object-fit: cover !important;
+                object-fit: cover !important;
+                display: block;
+                margin: auto;
             }
         }
     }

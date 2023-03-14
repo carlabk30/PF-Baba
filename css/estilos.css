@@ -258,6 +258,8 @@ MEDIAS QUERIES
   .card-container .card img {
     height: 900px;
     margin-bottom: 2rem;
+    display: block;
+    margin: auto;
   }
   .card-container .card b {
     font-size: 1.8rem;
@@ -387,6 +389,8 @@ MEDIAS QUERIES
   .card-container .card img {
     height: 250px !important;
     object-fit: cover !important;
+    display: block;
+    margin: auto;
   }
 }
 /***********************************
